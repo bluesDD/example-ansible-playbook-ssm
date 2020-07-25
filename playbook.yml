@@ -1,0 +1,13 @@
+---
+- hosts: host
+  tasks:
+  - name: Enable to install NGINX.
+    shell: "amazon-linux-extras enable nginx1.12"
+    become: yes
+
+  - name: Install NGINX.
+    yum: name=nginx
+
+  - command: chkconfig nginx on
+
+  - command: systemctl nginx restart

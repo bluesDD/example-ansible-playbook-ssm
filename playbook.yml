@@ -2,7 +2,7 @@
 - hosts: localhost
   tasks:
   - name: Enable to install NGINX.
-    shell: "amazon-linux-extras enable nginx"
+    shell: "amazon-linux-extras enable nginx1"
     become: yes
 
   - name: Install NGINX.

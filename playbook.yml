@@ -12,3 +12,9 @@
 
   - name: Install NGINX.
     yum: name=nginx
+
+
+  - name: Start Nginx
+  service:
+    name: nginx
+    state: restart
